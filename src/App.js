@@ -1,19 +1,9 @@
-import router from './Router';
-import './App.css';
-import { RouterProvider } from 'react-router-dom';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
+const App = () =>{
 
-function App() {
-  
-
-  return (
-   <>
-   <RouterProvider router = {router} />
-   </>
-  );
+  return(
+    <>
+    <h1>  WELCOME TO THIS PAGE </h1>
+    </>
+  )
 }
-
-
-
 export default App;

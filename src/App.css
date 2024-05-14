@@ -1,8 +1,11 @@
 body{
-  margin: 0;
-  padding:0;
-  font-weight: 600;
-        font-family: inter_semi_bold, fallback-inter_semi_bold, Arial, sans-serif;
+ 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  
 }
 .header{
   width: 100%;
@@ -33,15 +36,17 @@ body{
   color:brown;
 }
 .product-list li{
-  width:21%;
-  height: auto;
+ 
   border: 1px solid yellowgreen;
   list-style: none;
   border-radius: 6px;
   padding:10px;
   margin: 10px;
-  background-color: lightgray;
  
+ 
+}
+.card{
+  border: none;
 }
 .product-list li h2{
   color: rebeccapurple;
@@ -57,6 +62,8 @@ body{
  margin: 0 20%;
 }
 .abount-container{
+  padding:50px;
+  margin: 50px;
   text-align: center;
   background-color: aquamarine;
 }
@@ -64,7 +71,61 @@ body{
   text-align: center;
   margin: 50px auto;
 }
+.Footer-content{
+ background-color: rgba(0, 0, 0, 0.066);
+ margin: 0;
+ padding: 0;
+ text-align: center;
+}
+footer{
+        max-width: 1255px;
+        margin: 0 auto;
+        padding: 60px 20px 25px 20px;
+}
+.Body-Content{
+  text-align: center;
+  padding:20px;
+}
+.login{
+  text-align: center;
+  padding:10px;
+  margin: 20px;
+}
+.input-box{
+  text-align: center;
+  padding:10px;
+  margin: 20px;
+}
+input{
+  padding: 10px;
+  margin: 20px;
+}
+.button-card{
+  text-align: center;
+  padding:20px;
+  margin: 20px;
+}
+.container{
 
+  padding:20px;
+  margin: 0 auto;
+  max-width:500px;
+  height: 200px;
+  border-radius: 2px;
+  border: 3px solid blueviolet;
+}
+.Register-Page{
+   text-align: center;
+   padding:10px;
+   margin: 10px;
+}
+.Register-Page h2{
+  color:rgb(255, 0, 212);
+}
+.teble-content{
+  width:100px;
+  margin: 20px auto;
+}
 
 
 

@@ -1,6 +1,9 @@
 import React from 'react'
 
+
 function Contact() {
+
+
   return (
     <div className='contact-container'>
 
@@ -8,7 +11,7 @@ function Contact() {
 
 Buildings Alyssa, Begonia &
 
-Clove Embassy Tech Village,
+Clove Embassy Tech Village,dgfg
 
 Outer Ring Road, Devarabeesanahalli Village,
 

@@ -9,7 +9,7 @@ const ProductDetails = () =>{
 
     useEffect(()=>{
         getData();
-    }, []);
+    });
 
     async function getData(){
         const data = await fetch("https://jsonplaceholder.typicode.com/comments?postId="+id);
@@ -28,9 +28,9 @@ const ProductDetails = () =>{
                 return(
              <ul>
             <li>
-            <h2>{Pro.email}</h2>
-            <h2>{Pro.name}</h2>
-            <h2>{Pro.body}</h2>
+            <h3>{Pro.email}</h3>
+            <h3>{Pro.name}</h3>
+            <h3>{Pro.body}</h3>
             </li>
             </ul>
                 )

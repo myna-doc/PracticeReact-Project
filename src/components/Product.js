@@ -8,7 +8,7 @@ const Product = () =>
 
     useEffect(()=>{
       getProducts();
-      console.log('useeffect loading')
+      console.log('useeffect loading');
      }, []);
      
   
@@ -34,12 +34,15 @@ const Product = () =>
           Products.map((product) => {
             return(
             <li key={product.id}>
+       <div className="card" style={{width: "18rem"}}>
+      <img src= { product.thumbnail } className="card-img-top" alt="thumb" />
+     <div className="card-body">
+      <h5 className="card-title">{product.title}</h5>
+      <p className="card-text">{product.description}</p>
+      <p className="card-text">{product.price}</p>
+  </div>
+</div>
 
-              {/* <img src="https://cdn.dummyjson.com/product-images" alt="thumb"/> {product.thumbnail} */}
-            <img src={product.thumbnail} alt="thum"/>
-            <h2>Product Name:</h2>{product.title}
-            <h2>Product Price:</h2>{product.price}
-             <h2>Product Description:</h2>{product.description}
             </li>
            
             ) 
