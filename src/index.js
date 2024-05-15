@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Outlet, createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -13,15 +13,28 @@ import CRUDCreate from './CRUD_Opearation/CRUDCreate';
 import CRUDRead from './CRUD_Opearation/CRUDRead';
 import CRUDUpdate from './CRUD_Opearation/CRUDUpdate';
 import ProductDetails from './components/ProduactDeatils';
+import userContext from './ContextAPI/userContext';
 
 
 const Index = () =>{
 
+  const [users, setUser] = useState({
+
+      name:"MYNAVATHI",
+      Email:"mynavathi1998@gmail.com"
+   
+  })
+
   return(
     <>
+    <userContext.Provider value={{
+      user:users,
+      setUser:setUser
+    }}>
       <Header />
       <Outlet />
       <Footer />
+      </userContext.Provider>
     </>
   )
 }

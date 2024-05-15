@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext} from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import userContext from "../ContextAPI/userContext";
 
 const CRUDRead = () => {
     const [getapiData, setGetApiData] = useState([]);
-
+    const {user} = useContext(userContext);
     // get the data from the server
     useEffect(() => {
         const fetchData = async () => {
@@ -59,6 +60,8 @@ const CRUDRead = () => {
                     </td>
                 </tr>
             ))}
+            <h4>{user.name}</h4>
+            <h4>{user.Email}</h4>
             </div>
            
         </div>

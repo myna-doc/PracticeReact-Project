@@ -1,10 +1,15 @@
 import { useState } from "react";
+import { useContext } from "react";
+import userContext from "../ContextAPI/userContext";
 
 const Login = () => {
     const [showInputBox, setShowInputBox] = useState(false);
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [logOut, setLogOut] = useState(false);
+
+
+    const {user,setUser} = useContext(userContext);
 
     const inputBox = () => {
         setShowInputBox(true);
@@ -34,8 +39,13 @@ const Login = () => {
             <div className="login">
             {!logOut &&(
                 <><h1>Welcome!!!!</h1><button type="button" className="btn btn-primary" onClick={inputBox}>Login</button></>)}
-            </div>
 
+            </div>
+            <div style={{textAlign:"center"}}>
+                
+             <h2>{user.name}</h2>
+             <h2> {user.Email}</h2>
+            </div>
             {showInputBox &&
                 <>
                     <div className="input-box">
@@ -53,6 +63,9 @@ const Login = () => {
                     <button type="button" className="btn btn-success" onClick={handleLogout}>LOGOUT</button>
                 </div>
             }
+            {/* <div>
+                <input type="text" value={user.name} onChange={(e)=>setUser(e.target.value)}/>
+            </div> */}
         </>
     );
 }
